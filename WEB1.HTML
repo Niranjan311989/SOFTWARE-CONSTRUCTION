@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <link rel="stylesheet" href="WEB.CSS">
+    <script src="WEB.js"> </script>
+   
+    </head>
+
+<body id="background1">
+    <h1 Style="color:thistle; padding-top: 10px;">MOB Pay</h1>
+    <center>
+    <form  id="loginForm" onsubmit="return loginAlert()">
+        <h1>LOGIN</h1> <br><br>
+     <table>
+            <tr> <td>Username </td>
+                 <td>   <input type="text" id="username" required placeholder="Enter Username"><br></td>
+            </tr>    
+            <tr> <td>Email Address </td>
+                <td><input type="email" id="email" required placeholder="Enter Email Address"><br></td>
+            </tr>
+            <tr>
+                <td>Mobile Number</td> 
+                <td> 
+                    <input type="text" maxlength="10" id="mobile" required placeholder="Enter Mobille Number"><br></td>
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" id="pass" required placeholder="Enter Password"><br></td>
+            </tr>
+            <tr>
+                <td>Confirm Password   </td>
+                <td><input type="password" id="cpass" required placeholder="Confirm Password"><br></td></tr>
+     </table><br>
+    <button type="button" onclick="loginAlert()">Login</button>
+    <button type="button" onclick="window.location.href='WEB.HTML'"> Home </button>
+    </form>
+
+
+    </center>
+    
+</body>
+</html>

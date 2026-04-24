@@ -1,0 +1,140 @@
+       * {
+           margin: 0;
+           padding: 0;
+       }
+
+       .biv {
+
+           background-color: yellow;
+           display: inline;
+       }
+
+       body {
+           background-color: rgb(245, 240, 245);
+           text-align: center;
+       }
+
+       header {
+           padding: 25px;
+           background-color: white;
+           color: rgb(8, 8, 8);
+           width: auto;
+           position: sticky;
+           top: 0px;
+
+
+       }
+
+
+       ul,
+       h1,
+       li {
+           display: inline;
+           padding: 25px;
+       }
+
+       ul {
+           padding-left: 60%;
+       }
+
+       button {
+           background-color: white;
+           color: white;
+           border-radius: 10px;
+           padding: 10px;
+           cursor: pointer;
+           background-color: rgb(104, 20, 183);
+
+       }
+
+       button:hover {
+           background-color: #d4d1d1;
+       }
+
+       #loginForm {
+           display: block;
+           width: 300px;
+           height: auto;
+           background-color: white;
+           padding: 50px;
+           border-radius: 10px;
+           box-shadow: 0 0 5px black;
+           text-align: center;
+           margin-top: 20%;
+       }
+
+       #pass,
+       #cpass,
+       #email,
+       #mobile,
+       #username {
+           width: 200px;
+           color: burlywood;
+           height: 30px;
+           border-radius: 10px;
+           text-align: center;
+       }
+
+       #background1 {
+           background-image: url("Background image.avif");
+           background-size: cover;
+           background-color: rgb(245, 240, 245);
+          
+
+    
+       }
+
+       #mainTable {
+
+           width: 25%;
+           flex-basis: 25%;
+           border-spacing: 30px;
+           text-align: center;
+           justify-content: space-around;
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+
+
+       }
+
+       #card {
+           width: 50%;
+           background-color: rgb(255, 250, 250);
+           padding: 10px;
+           border-radius: 10px;
+           box-shadow: 0 0 5px black;
+           margin: 0 auto;
+           text-align: center;
+           height: auto;
+       }
+
+       #card1 {
+           width: 32%;
+           background-color: rgb(255, 250, 250);
+           padding: 10px;
+           border-radius: 10px;
+           box-shadow: 0 0 5px black;
+           margin: 0 auto;
+           text-align: center;
+           height: auto;
+           display: flex;
+           flex-direction: column;
+           gap: 50px;
+
+       }
+
+       .search {
+           position: relative;
+           top: 10px;
+
+           gap: 50px;
+       }
+
+       #search {
+           width: 500px;
+           height: 50px;
+           border-radius: 50px;
+
+       }
+       
