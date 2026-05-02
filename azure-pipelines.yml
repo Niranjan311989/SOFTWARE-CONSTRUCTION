@@ -1,0 +1,47 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+# Step 1: Checkout repository
+- checkout: self
+  displayName: 'Checkout Repository'
+
+# Step 2: Verify project files
+- script: |
+    echo "Listing project files..."
+    ls -la
+  displayName: 'Check Repository Files'
+
+# Step 3: Validate HTML, CSS, JS existence
+- script: |
+    if [ -f WEB.HTML ] && [ -f WEB.CSS ] && [ -f WEB.js ]; then
+      echo "All required files found."
+    else
+      echo "Missing required project files!"
+      exit 1
+    fi
+  displayName: 'Validate Website Files'
+
+# Step 4: Copy website files to artifact staging
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: |
+      WEB.HTML
+      WEB.CSS
+      WEB.js
+      *.avif
+      *.webp
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Copy Website Files'
+
+# Step 5: Publish build artifacts
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'website'
+    publishLocation: 'Container'
+  displayName: 'Publish Website Artifacts'
